@@ -121,3 +121,4 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
 
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
+  Prefer prop drilling directly; it allows you to be more explicit / less abstracted. This week's work was a bit difficult to fully grasp as it was mostly connecting pieces together but not buildnig up those pieces themselves.
