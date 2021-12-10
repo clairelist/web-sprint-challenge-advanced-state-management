@@ -1,8 +1,37 @@
+//import SMURF_FETCH from '*actions'
+//  import api call function, too! here it is called 'callApi()' and it invoked as such
+//import FETCH_SUCCESS from --same
+//import FETCH_FAIL from --same
+//import ADD_SMURF from --same
+
 
 export const initialState = {
+    smurfs: [],
+    loading: 0, //NOT an int! BOOL value!!
+    error: 'Error loading your smurfs!'
 }
 
-const reducer = ()=>{
+const reducer = (state, action)=>{
+    switch(action.type){
+        case (SMURF_FETCH): //should return a fetch call to our smurf api, living at http://localhost:3333/smurfs
+            return({
+                callApi(state)
+            });
+        case (FETCH_SUCCESS): //then, on checking if SMURF_FETCH succeeded, set into state our smurfs
+        return({
+            ...state, setState(smurfs)
+        });
+        case (FETCH_FAIL): //if SMURF_FETCH failed
+        return({
+            error: error
+        });
+        case (ADD_SMURF):
+            return ({
+                ...state, setState(ADD_SMURF) //all the needful is in actions ! ::ADD_SMURF
+            });
+        default:
+            return state;
+    }
 }
 
 //**************DO NOT EDIT ANY CODE BEYOND THIS POINT**************//
