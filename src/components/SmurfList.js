@@ -20,7 +20,7 @@ import {connect} from 'react-redux';
     return(<div className="listContainer">
         {
             smurfs.map(smurf=>{
-                return (<Smurf smurf={smurf} />)
+                return (<Smurf smurf={smurf} key={smurf.id}/>)
             })
        
         }
@@ -28,7 +28,7 @@ import {connect} from 'react-redux';
 }
 
 const mapStateToProps=(state)=>{
-    return ({smurfs: state.reducer.smurfs})
+    return ({smurfs: state.reducer.loadState})
 }
 
 export default connect(mapStateToProps)(SmurfList);
